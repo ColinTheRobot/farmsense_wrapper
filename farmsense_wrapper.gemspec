@@ -8,7 +8,7 @@ Gem::Specification.new do |spec|
   spec.version       = FarmsenseWrapper::VERSION
   spec.authors       = ["cohart"]
   spec.email         = ["me@colin-hart.com"]
-  spec.summary       = %q{TODO: Write a short summary. Required.}
+  spec.summary       = %q{A wrapper for the Farmsense API, which provides day lengths, frost dates, and moon phases}
   spec.description   = %q{TODO: Write a longer description. Optional.}
   spec.homepage      = ""
   spec.license       = "MIT"
@@ -20,4 +20,5 @@ Gem::Specification.new do |spec|
 
   spec.add_development_dependency "bundler", "~> 1.6"
   spec.add_development_dependency "rake"
+  spec.add_development_dependency 'pry'
 end
