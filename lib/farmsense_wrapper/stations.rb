@@ -2,35 +2,35 @@ require 'pry'
 require 'httparty'
 require 'json'
 
+module
+  class Stations
+    attr_reader :endpoint_url
+    attr_writer :latitude, :longitude
 
-class Stations
-  attr_reader :endpoint_url
-  attr_writer :latitude, :longitude
+    # has to initialize with arguments as a hash
+    def initialize(args)
+      @latitude = args[:latitude]
+      @longitude = args[:longitude]
+      @endpoint_url = "http://farmsense-prod.apigee.net/v1/frostdates/stations/?lat=#{@latitude}8&lon=#{@longitude}"
+    end
 
-  # has to initialize with arguments as a hash
-  def initialize(args)
-    @latitude = args[:latitude]
-    @longitude = args[:longitude]
-    @endpoint_url = "http://farmsense-prod.apigee.net/v1/frostdates/stations/?lat=#{@latitude}8&lon=#{@longitude}"
-  end
+    def display
+      get
+      @parsed_response
+    end
 
+    def get
+     raw = HTTParty.get(endpoint_url)
+     @parsed_response = parse(raw)
+    end
 
-  def display
-    get
-    @parsed_response
-  end
-
-  def get
-   raw = HTTParty.get(endpoint_url)
-   @parsed_response = parse(raw)
-  end
-
-  def parse(data)
-    JSON.parse(data)
+    def parse(data)
+      JSON.parse(data)
+    end
   end
 end
 
-s = Stations.new({latitude: 42, longitude: -112})
+  #s = Stations.new({latitude: 42, longitude: -112})
 binding.pry
 
 
