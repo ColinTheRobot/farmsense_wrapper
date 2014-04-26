@@ -14,6 +14,13 @@ class FrostDates
     @endpoint_url = "http://farmsense-prod.apigee.net/v1/frostdates/probabilities/?station=#{@station_id}&season=#{@season}"
   end
 
+  def display
+    get
+    @parsed_response
+  end
+
+private
+
   def get
     raw = HTTParty.get(endpoint_url)
     @parsed_response = parse(raw)
@@ -21,10 +28,6 @@ class FrostDates
 
   def parse(data)
     JSON.parse(data)
-  end
-
-  def display
-    @parsed_response
   end
 end
 

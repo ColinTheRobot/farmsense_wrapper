@@ -14,6 +14,12 @@ class Stations
     @endpoint_url = "http://farmsense-prod.apigee.net/v1/frostdates/stations/?lat=#{@latitude}8&lon=#{@longitude}"
   end
 
+
+  def display
+    get
+    @parsed_response
+  end
+
   def get
    raw = HTTParty.get(endpoint_url)
    @parsed_response = parse(raw)
@@ -22,12 +28,9 @@ class Stations
   def parse(data)
     JSON.parse(data)
   end
-
-  def display
-    @parsed_response
-  end
 end
 
+s = Stations.new({latitude: 42, longitude: -112})
 binding.pry
 
 
