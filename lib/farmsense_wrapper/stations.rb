@@ -1,8 +1,7 @@
 require 'pry'
-require 'httparty'
+# require 'httparty'
 require 'json'
 
-module
   class Stations
     attr_reader :endpoint_url
     attr_writer :latitude, :longitude
@@ -27,7 +26,6 @@ module
     def parse(data)
       JSON.parse(data)
     end
-  end
 end
 
   #s = Stations.new({latitude: 42, longitude: -112})
