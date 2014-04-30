@@ -30,8 +30,8 @@ module GetStation
   end
 end
 
-  s = Stations.new({latitude: 42, longitude: -112})
-binding.pry
+  # s = Stations.new({latitude: 42, longitude: -112})
+# binding.pry
 
 
 # to start this needs to just get the frost dates like how I want them.
