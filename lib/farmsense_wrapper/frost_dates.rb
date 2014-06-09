@@ -1,4 +1,3 @@
-require 'pry'
 # require 'httparty'
 require 'json'
 
@@ -18,8 +17,6 @@ module FindFrostDates
       get
       @parsed_response
     end
-
-  #  private
 
     def get
       raw = HTTParty.get(endpoint_url)

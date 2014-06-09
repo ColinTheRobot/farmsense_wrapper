@@ -1,13 +1,11 @@
 require_relative 'farmsense_wrapper/version'
 require_relative 'farmsense_wrapper/stations'
 require_relative 'farmsense_wrapper/frost_dates'
-
- # require_relative 'stations.rb'
- # require_relative 'frost_dates.rb'
+require 'httparty'
 
 #return nearest station to your coordinates
 module FarmSenseWrapper
-
+    include HTTParty
     class << self
 
     def stations(lat, long)
@@ -27,8 +25,6 @@ end
 
 
 
-
-
-
-
-# TODO: i want a method that takes two arguments creates a new station object and outputs display
+# TODO: a method that takes two arguments creates a new station object and outputs display
+# OPTIMIZE: methods that parse probabilities
+# OPTIMIZE: methods that pars dates and return a time object

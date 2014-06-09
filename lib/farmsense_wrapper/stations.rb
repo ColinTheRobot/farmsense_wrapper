@@ -1,5 +1,3 @@
-require 'pry'
-require 'httparty'
 require 'json'
 
 module GetStation
@@ -7,7 +5,7 @@ module GetStation
     attr_reader :endpoint_url
     attr_writer :latitude, :longitude
 
-    # has to initialize with arguments as a hash
+
     def initialize(args)
       @latitude = args[:latitude]
       @longitude = args[:longitude]
@@ -29,21 +27,3 @@ module GetStation
     end
   end
 end
-
-
-
-# to start this needs to just get the frost dates like how I want them.
-# then it can provide options to get any frost date.
-# these are all parsing methods,
-# then a display method, so the display method should
-# get should get refactored into initialize as self.get
-# then build the gem then install
-# build
-
-
-# So I'm going to have three different calls for frostdates (which is the priority)
-# then for moon phases and day lengths
-
-# Frost dates only has to call get stations and get frost dates. 2 methods
-
-# so then need
