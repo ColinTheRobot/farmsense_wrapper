@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ["cohart"]
   spec.email         = ["me@colin-hart.com"]
   spec.summary       = %q{A wrapper for the Farmsense API, which provides day lengths, frost dates, and moon phases}
-  spec.description   = %q{This wrapper currently only provides methods for retunring nearest whether stations and frostdates in json format}
+  spec.description   = %q{This wrapper currently only provides methods for returning nearest weather stations and frostdates for said stations in json format}
   spec.homepage      = "https://github.com/cohart/farmsense_wrapper"
   spec.license       = "MIT"
 

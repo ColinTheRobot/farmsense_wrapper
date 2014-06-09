@@ -1,6 +1,6 @@
 # FarmsenseWrapper
 
-This gem is a lightweight wrapper for the Farmsense API [Farmsense.net]. This wrapper returns a json object of nearest weather stations to the input latitude and longitude and a json object of frost probabilities for spring or fall.
+This gem is a lightweight wrapper for the Farmsense API [Farmsense.net]. This wrapper returns a JSON object of nearest weather stations to the input latitude and longitude and a JSON object of frost probabilities for spring or fall.
 
 ## Installation
 
@@ -17,7 +17,8 @@ Or install it yourself as:
     $ gem install farmsense_wrapper
 
 ## Usage
-$FarmSenseWrapper.stations(latitude, longitude)
+
+FarmSenseWrapper.stations(latitude, longitude)
 
 Return's a JSON object of closest stations. To find the probabilities of frost for a station use the id provided.
 
@@ -35,9 +36,9 @@ $FarmSenseWrapper.stations(42, -112)
     }]
 ```
 
-FarmSenseWrapper.dates(id, seasson)
-spring: 1
-fall: 2
+FarmSenseWrapper.dates(id, season)
+- spring: 1
+- fall: 2
 
 ```
 FarmSenseWrapper.dates(506586, 2)
@@ -62,7 +63,7 @@ FarmSenseWrapper.dates(506586, 2)
 
 ## Contributing
 
-1. Fork it ( https://github.com/[my-github-username]/farmsense_wrapper/fork )
+1. Fork it
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
