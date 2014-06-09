@@ -1,9 +1,7 @@
 language: ruby
 rvm:
   - 2.1.0
-deploy:
-  provider: rubygems
-  api_key:
-    -secure: "pk9g0Eg/MzhyIA4ZmHKP9X+AnCzUukzkcsKUejxUt6C1F1t9YGkPE1wjpTvUIP/AjIQOmjgeIdsz8cEY/80/F9pcLy1zpN4Y7ORyXz7gTiKmA8nRplj9Nyr/GF++U/71EudHsUYiBzPZ4mRR4EoI7amLfMFHaXw65TE8kWfWf9o="
-   on:
-    tags: true
+script:
+  - "bundle exec rspec"
+
+
