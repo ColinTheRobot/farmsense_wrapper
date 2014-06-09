@@ -1,4 +1,4 @@
-https://travis-ci.org/cohart/farmsense_wrapper.svg?branch=master
+[![Build Status](https://travis-ci.org/cohart/farmsense_wrapper.svg?branch=master)](https://travis-ci.org/cohart/farmsense_wrapper)
 
 # FarmsenseWrapper
 
