@@ -2,7 +2,7 @@
 
 # FarmsenseWrapper
 
-This gem is a lightweight wrapper for the Farmsense API [Farmsense.net]. This wrapper returns a JSON object of nearest weather stations to the input latitude and longitude and a JSON object of frost probabilities for spring or fall.
+This gem is a lightweight wrapper for the Farmsense API [Farmsense.net], returning a JSON object of nearest weather stations to the input latitude and longitude and a JSON object of frost probabilities for spring or fall.
 
 ## Installation
 
